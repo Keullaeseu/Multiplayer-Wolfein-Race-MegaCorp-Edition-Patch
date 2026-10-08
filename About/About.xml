@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Multiplayer Wolfein Race MegaCorp Edition Patch</name>
+	<author>Keullaeseu</author>
+	<packageId>keullaeseu.mp.com.zoshsgahdnkc.WRMegaCorpEdition</packageId>
+	<modVersion>1.0.0.0</modVersion>
+	<url>https://github.com/Keullaeseu/Multiplayer-Wolfein-Race-MegaCorp-Edition-Patch</url>
+	<description>Provides multiplayer support for the Wolfein Race MegaCorp Edition mod by Zoshsgahdnkc.</description>
+
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+
+	<loadAfter>
+		<li>rwmt.Multiplayer</li>
+		<li>Ancot.AncotLibrary</li>
+		<li>keullaeseu.mp.Ancot.AncotLibrary</li>
+		<li>MelonDove.WolfeinRace</li>
+		<li>keullaeseu.mp.MelonDove.WolfeinRace</li>
+		<li>com.zoshsgahdnkc.WRMegaCorpEdition</li>
+	</loadAfter>
+
+	<modDependencies>
+		<li>
+			<packageId>rwmt.Multiplayer</packageId>
+			<displayName>Multiplayer</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2606448745</steamWorkshopUrl>
+			<downloadUrl>https://github.com/rwmt/Multiplayer/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>Ancot.AncotLibrary</packageId>
+			<displayName>Ancot Library</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2988801276</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>keullaeseu.mp.Ancot.AncotLibrary</packageId>
+			<displayName>Multiplayer Ancot Library Patch</displayName>
+			<downloadUrl>https://github.com/Keullaeseu/Multiplayer-Ancot-Library-Patch/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>MelonDove.WolfeinRace</packageId>
+			<displayName>Wolfein Race</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3473140562</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>keullaeseu.mp.MelonDove.WolfeinRace</packageId>
+			<displayName>Multiplayer Wolfein Race Patch</displayName>
+			<downloadUrl>https://github.com/Keullaeseu/Multiplayer-Wolfein-Race-Patch/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>com.zoshsgahdnkc.WRMegaCorpEdition</packageId>
+			<displayName>Wolfein Race MegaCorp Edition</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3687841204</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>
