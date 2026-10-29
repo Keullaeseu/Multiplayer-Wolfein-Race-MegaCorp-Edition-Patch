@@ -12,6 +12,7 @@
 *.env
 *.sln
 *.slnx
+AGENTS.md
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
