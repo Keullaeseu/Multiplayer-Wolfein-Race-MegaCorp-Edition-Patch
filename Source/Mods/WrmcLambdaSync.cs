@@ -75,6 +75,51 @@ internal static class WrmcLambdaSync
         return matches.Count;
     }
 
+    /// <summary>
+    ///     Syncs only the lambdas declared directly on <paramref name="parentType" />
+    ///     (no captured locals, so the parent instance is the sync target) whose IL
+    ///     writes one of the state fields or calls one of the state methods.
+    ///     Used where a parent method holds several <c>void()</c> lambdas - UI-only
+    ///     ones (dialogs, float menus, dev logs) must not be registered.
+    /// </summary>
+    public static int SyncStateChangingParentLambdas(
+        Type parentType,
+        string parentMethod,
+        string[] stateFieldNames,
+        string[] stateMethodNames,
+        bool debugOnly = false)
+    {
+        var matches = FindParentLambdas(parentType, parentMethod, typeof(void));
+        var synced = 0;
+
+        foreach (var match in matches)
+        {
+            if (!TouchesState(match, stateFieldNames, stateMethodNames))
+                continue;
+
+            try
+            {
+                var sync = MP.RegisterSyncMethod(match);
+
+                if (debugOnly)
+                    sync.SetDebugOnly();
+
+                synced++;
+                Log.Message($"{LogPrefix} Synced {parentType.Name}.{parentMethod} action {match.Name}.");
+            }
+            catch (Exception exception)
+            {
+                Log.Warning(
+                    $"{LogPrefix} Could not sync {parentType.Name}.{parentMethod} action {match.Name}: {exception.Message}");
+            }
+        }
+
+        if (synced == 0)
+            Log.Warning($"{LogPrefix} No state-changing actions found in {parentType.Name}.{parentMethod}.");
+
+        return synced;
+    }
+
     public static int SyncStateChangingLambdas(
         string typeName,
         string parentMethodName,

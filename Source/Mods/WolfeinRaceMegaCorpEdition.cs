@@ -32,6 +32,9 @@ public class WolfeinRaceMegaCorpEdition
         SafePatch(WrmcArmisticeDay.Patch);
         SafePatch(WrmcIncidentAndVfx.Patch);
 
+        // Optional modules: resolve their types by name and skip when inactive.
+        SafePatch(WrmcGrowthVat.Patch);
+
         Log.Message($"{LogPrefix} Initialized.");
     }
 
