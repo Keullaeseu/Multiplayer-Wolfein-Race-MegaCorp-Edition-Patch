@@ -7,12 +7,13 @@ This mod is designed to improve multiplayer synchronization when playing with th
 ## Features
 
 - Adds multiplayer compatibility for [Wolfein Race MegaCorp Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=3687841204), including:
-  - Switch-mode ranged weapon gizmo and verb rebuild.
+  - Switch-mode ranged weapon gizmo and verb rebuild, including the VEF variant of the switch-mode comp.
   - Faction comms dialog (donations, military aid calls, prototype heart purchase, data-quest option).
   - Civilian ship crash and debt slave choice letters.
   - Armistice Day caravan visit and pawn join dialog.
   - Black market trade ship incident RNG isolation.
   - Dragon breath visual-effect RNG isolation.
+  - Wolfein growth vat (Biotech optional module): embryo insertion, cancel growth, and cancel load, plus the VNPE pipe variant.
 
 ## Requirements
 
@@ -95,7 +96,10 @@ Do not add, remove, update, or reorder mods while players are connected to the s
 
 This patch is intended to provide multiplayer compatibility for [Wolfein Race MegaCorp Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=3687841204)
 itself (weapon-mode switching, faction comms dialog, choice letters, Armistice Day
-caravan visit, black market incident, dragon breath effects).
+caravan visit, black market incident, dragon breath effects, Wolfein growth vat).
+The optional Biotech, VEF, and Biotech + Vanilla Nutrient Paste Expanded modules are
+supported when active; their patches are resolved by type name and skipped silently
+when the corresponding assembly is not loaded.
 Base Wolfein systems, Ancot Library base systems, and Humanoid Alien Races styling
 are covered by the required companion patches listed above, not duplicated here.
 
